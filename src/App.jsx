@@ -2,7 +2,7 @@
 // JSON data for one book is as follows:
 // {"id":2,"title":"Fire","author":"Bet"}
 // The id is auto-incremented in the server
-// The server is running at https://node41091-noderest.proen.app.ruk-com.cloud/
+// The server is running at https://node57538-phattanapisitk.proen.app.ruk-com.cloud/books
 import "./App.css";
 
 import { useEffect, useState } from "react";
@@ -16,7 +16,7 @@ export default function App() {
     const [booksLoading, setBooksLoading] = useState(true);
 
     const getAllBooks = async () => {
-        await axios.get("https://node41091-noderest.proen.app.ruk-com.cloud/books")
+        await axios.get("https://node57538-phattanapisitk.proen.app.ruk-com.cloud/books")
             .then((resp) => {
                 void setBooks(resp.data);
                 void setBooksLoading(false);
